@@ -8,6 +8,9 @@ const printBottleReport = bottleData => {
   TOTAL EARNED:
     BOTTLES: ${bottleData.recycling.bottles}
     CAPS: ${bottleData.recycling.caps}
+  REMAINING:
+    BOTTLES: ${bottleData.remaining.bottles}
+    CAPS: ${bottleData.remaining.caps}
  `;
 
  console.log(reportString);

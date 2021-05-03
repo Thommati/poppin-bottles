@@ -6,6 +6,10 @@ const bottles = investment => {
     recycling: {
       bottles: 0,
       caps: 0
+    },
+    remaining: {
+      bottles: 0,
+      caps: 0
     }
   };
 
@@ -14,6 +18,8 @@ const bottles = investment => {
   const calculateRedeemed = bottleCapObj => {
     // If there are not enough bottles are caps to redeem then return zero.
     if (bottleCapObj.bottles < 2 && bottleCapObj.caps < 4) {
+      bottleBreakDown.remaining.bottles = bottleCapObj.bottles;
+      bottleBreakDown.remaining.caps = bottleCapObj.caps;
       return 0;
     }
 
